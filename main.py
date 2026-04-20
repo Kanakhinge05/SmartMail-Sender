@@ -115,6 +115,28 @@ def get_recipient_name(row):
                 return value
     return "Hiring Manager"
 
+
+def is_wrong_mail_error(message: str) -> bool:
+    if not message:
+        return False
+    message = message.lower()
+    return any(
+        phrase in message
+        for phrase in [
+            "address not found",
+            "delivery has failed",
+            "recipient's domain",
+            "not listed in the domain's directory",
+            "recipient address rejected",
+            "recipient refused",
+            "550 5.1.1",
+            "550 5.1.0",
+            "5.1.1",
+            "5.1.0",
+            "mailbox unavailable",
+        ]
+    )
+
 # =============================================================================
 # Data Loading
 # =============================================================================
@@ -182,11 +204,17 @@ for index, row in df.iterrows():
         success_count += 1
 
     except Exception as e:
+        error_message = str(e).strip()
+        reason = (
+            "Rejected or invalid recipient address"
+            if is_wrong_mail_error(error_message)
+            else error_message
+        )
         wrong_row = row.to_dict()
         wrong_row["email"] = email
-        wrong_row["reason"] = str(e)
+        wrong_row["reason"] = reason
         wrong_records.append(wrong_row)
-        print(f"❌ Failed for {email}: {e}")
+        print(f"❌ Failed for {email}: {reason}")
         failure_count += 1
 
 end_time = time.time()
