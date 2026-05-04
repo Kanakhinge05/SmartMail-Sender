@@ -4,7 +4,7 @@ I hope you are doing well.
 
 I am reaching out to express my interest in potential opportunities within your organization for roles such as AWS DevOps Engineer, Junior DevOps Engineer, or Cloud Engineer. I am currently working as a DevOps Engineer at Vected Technologies, where I have gained hands-on experience with AWS services (EC2, S3, IAM, VPC), Terraform, and CI/CD pipelines using GitHub Actions.
 
-I am particularly interested in contributing to teams that focus on scalable infrastructure, automation, and modern DevOps practices. I am eager to further develop my skills in areas such as Kubernetes and advanced cloud architecture while delivering reliable and efficient solutions.
+I am particularly interested in contributing to teams that focus on scalable infrastructure, automation, and modern DevOps practices. I am eager to further develop my skills in advanced cloud architecture while delivering reliable and efficient solutions.
 
 I have attached my resume for your review. I would greatly appreciate the opportunity to discuss how my skills and experience align with your team’s needs.
 
@@ -14,7 +14,7 @@ Best regards,
 Kanak Kumar Hinge
 Phone Number: 8602343454
 LinkedIn Profile: https://www.linkedin.com/in/kanakkumarhinge/
-
+website: https://kanakkumarhinge.wixsite.com/website
 
 {ai_line}
 
